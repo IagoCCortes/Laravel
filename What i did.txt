@@ -1,0 +1,32 @@
+--download laravel through composer
+composer global require laravel/installer
+
+--set path
+C:\%USERPROFILE%\AppData\Roaming\Composer\vendor\bin
+
+--create a laravel installation NAME
+laravel new NAME
+
+--start a development server
+php artisan serve
+
+--set up authentication
+composer require laravel/ui
+php artisan ui vue --auth
+php artisan migrate//exception
+
+--mysql command line
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'iago0209';
+
+npm install
+
+npm run dev
+npm run dev
+
+em Laravel/.env coloquei a senha do usuário mysql
+
+--migrate
+php artisan migrate
+
+--rerun server
+php artisan serve
