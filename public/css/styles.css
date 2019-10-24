@@ -1,0 +1,41 @@
+.sideHead {
+    background-color: #0079d3;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    height: 80px;
+    position: relative;
+}
+
+.sideText {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  bottom: 8px;
+  color: #fff;
+  left: 16px;
+  position: absolute;
+}
+
+@media (min-width: 576px){
+  .containerL {
+      max-width: 768px !important;
+  }
+  }
+  @media (min-width: 768px){
+    .containerL {
+        max-width: 992px !important;
+    }
+    }  
+    @media (min-width: 992px){
+      .containerL {
+          max-width: 1200px !important;
+      }
+      }
+@media (min-width: 1200px){
+.containerL {
+    max-width: 1900px !important;
+}
+}
+

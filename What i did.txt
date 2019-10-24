@@ -30,3 +30,18 @@ php artisan migrate
 
 --rerun server
 php artisan serve
+
+--tip
+.row>.col-3
+
+--everytime i make changes to the frontend i should run npm run dev
+--bootstrap has 12 columns
+--you can now also use the middle mouse button to multiline select / box select.
+--ctrl+d para selecionar texto igual (clicar 1 vez por ocorrência)
+
+php artisan tinker
+php artisan migrate:fresh
+php artisan help make:controller
+
+--dump and die
+dd($xxx);

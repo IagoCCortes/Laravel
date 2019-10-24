@@ -1,1 +1,15 @@
-//
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+// Variables
+@import 'variables';
+
+.sideHead {
+    background-color: #0079d3;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    height: 80px;
+    position: relative;
+}

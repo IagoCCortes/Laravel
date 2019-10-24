@@ -17,4 +17,5 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/feed/{user}', 'FeedController@index')->name('feed.show');
+Route::get('/profile/{user}', 'ProfileController@index')->name('profile.show');
