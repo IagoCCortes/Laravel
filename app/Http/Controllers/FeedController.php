@@ -10,7 +10,7 @@ class FeedController extends Controller
     public function index($user)
     {
         $user = User::find($user);
-        return view('home', [
+        return view('feed.index', [
             'user' => $user
         ]);
     }

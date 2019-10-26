@@ -45,3 +45,16 @@ php artisan help make:controller
 
 --dump and die
 dd($xxx);
+
+php artisan make:model Profile -m
+
+php artisan storage:link
+
+php artisan tinker  
+    $post = Post::find(1);
+    $post->delete();
+    //deletes everything from post
+    Post::truncate();
+    Post::all();
+
+composer require intervention/image

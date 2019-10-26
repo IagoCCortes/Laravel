@@ -9,6 +9,11 @@
                 <h2 class="sideText">Spotify</h2>
             </div>
             <div>
+                <div>{{$user->posts->count()}} posts</div>
+                <div>{{$user->profile->description ?? 'Unset'}}</div>
+                <div><a href="/profile/{{$user->profile->id}}/edit">
+                                        Edit profile
+                </div></a>
             </div>
         </div>
     </div>
