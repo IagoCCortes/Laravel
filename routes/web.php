@@ -17,11 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('/follow/{user}', 'FollowsController@store');
+
+Route::get('/', 'PostsController@index');
 Route::get('/p/create', 'PostsController@create');
 Route::post('/p', 'PostsController@store');
 Route::get('/p/{post}', 'PostsController@show');
-
-Route::get('/feed/{user}', 'FeedController@index')->name('feed.show');
 
 Route::get('/profile/{user}', 'ProfilesController@show')->name('profile.show');
 Route::get('/profile/{user}/edit', 'ProfilesController@edit')->name('profile.edit');

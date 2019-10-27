@@ -14,5 +14,7 @@
             </div>
         </div>
     </div>
+
+    <hr style="background-color: white">
 </div>
 @endsection

@@ -63,7 +63,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     
-                                    <a class="dropdown-item" href="/profile/{{$user->profile->id}}">
+                                    <a class="dropdown-item" href="/profile/{{auth()->user()->id}}">
                                         My profile
                                     </a>
 
