@@ -72,3 +72,7 @@ php artisan make:migration creates_profile_user_pivot_table --create profile_use
 composer require laravel/telescope
 
 php artisan telescope:install
+
+php artisan telescope:clear
+
+php artisan make:mail NewUserWelcomeMail -m emails.welcome-email

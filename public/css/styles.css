@@ -38,4 +38,6 @@
     max-width: 1900px !important;
 }
 }
-
+.filter-white{
+  filter: invert(91%) sepia(92%) saturate(31%) hue-rotate(203deg) brightness(107%) contrast(100%);
+}

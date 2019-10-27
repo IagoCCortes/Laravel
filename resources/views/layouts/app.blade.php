@@ -7,7 +7,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Croatoan</title>
+    <link rel="shortcut icon" href="/svg/logo.svg" />
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -22,13 +23,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" type="text/css">
     <!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">-->
 </head>
-<body>
+<body style="background-color: #000">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm pb-0 pt-0" style="background-color: #222">
             <div class="container containerL">
                 <a class="navbar-brand d-flex" href="{{ url('/') }}">
-                    <div><img src="/svg/logo-2.svg" alt="2-D" style="height:50px" class="pr-3 rounded-circle"></div>
-                    <div class='pt-3'>{{ config('app.name', 'Laravel') }}</div>
+                    <div><img src="/svg/logo.svg" alt="2-D" style="height:50px" class="pr-2 filter-white"></div>
+                    <div class='pt-3'>Croatoan</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

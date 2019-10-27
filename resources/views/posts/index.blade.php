@@ -17,6 +17,7 @@
                 </a>
             @endforeach
         </div>
+
         <div class="col-3">
             <div class="sideHead" style="background-image: url('https://www.redditstatic.com/desktop2x/img/leaderboard/banner-background.png');">
                 <h2 class="sideText">Spotify</h2>
