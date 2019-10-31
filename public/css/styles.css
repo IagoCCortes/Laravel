@@ -22,21 +22,21 @@
   .containerL {
       max-width: 768px !important;
   }
-  }
-  @media (min-width: 768px){
-    .containerL {
-        max-width: 992px !important;
-    }
-    }  
-    @media (min-width: 992px){
-      .containerL {
-          max-width: 1200px !important;
-      }
-      }
-@media (min-width: 1200px){
-.containerL {
-    max-width: 1900px !important;
 }
+@media (min-width: 768px){
+  .containerL {
+      max-width: 992px !important;
+  }
+}  
+@media (min-width: 992px){
+  .containerL {
+      max-width: 1200px !important;
+  }
+}
+@media (min-width: 1200px){
+  .containerL {
+    max-width: 100% !important;
+  }
 }
 .filter-white{
   filter: invert(91%) sepia(92%) saturate(31%) hue-rotate(203deg) brightness(107%) contrast(100%);

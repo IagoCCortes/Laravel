@@ -76,3 +76,11 @@ php artisan telescope:install
 php artisan telescope:clear
 
 php artisan make:mail NewUserWelcomeMail -m emails.welcome-email
+
+php artisan event:generate
+
+Put @csrf in every form so that that laravel can check whether the form is coming from this server rather than somebody elses
+
+php artisan make:event userRegisteredEvent
+
+php artisan make:listener WelcomeNewUser

@@ -6,9 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    //telling laravel don't guard anything, i'm goingo to do things my own way
+
+    //turning off mass assignment protection can use 
+    //protected fillable = ['Description',....]
+    //to do that to specific fields
     protected $guarded = []; 
     public function user(){
         return $this->belongsTo(User::Class);
+    }
+
+    public function liked(){
+        return $this->belongsToMany(User::class);
     }
 }

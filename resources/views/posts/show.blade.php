@@ -5,6 +5,7 @@
     <div class="row">
         <div class="col-12">
             <div class="border-0 bg-dark rounded p-3 mb-4" style="color: #fff">
+                <like-button post-id="{{$post->id}}" likes="{{$likes}}"></like-button>
                 <div class="mb-8">
                     <h4>{{$post->title}}</h2>
                 </div>
@@ -14,7 +15,5 @@
             </div>
         </div>
     </div>
-
-    <hr style="background-color: white">
 </div>
 @endsection

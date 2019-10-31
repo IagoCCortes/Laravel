@@ -1,27 +1,17 @@
 @extends('layouts.app')
 
+@section('empty', 'hmm... this user hasn\'t posted anything')
 @section('content')
 <div class="container containerL">
     <div class="row">
-        <div class="col-9">
-            @foreach($posts as $post)
-                <a href="/p/{{$post->id}}">    
-                    <div class="border-0 bg-dark rounded p-3 mb-4" style="color: #fff">
-                        <div class="mb-8">
-                            <h4>{{$post->title}}</h2>
-                        </div>
-                        <div class="">
-                            <img src="/storage/{{$post->image}}" alt="post" class="w-100">
-                        </div>
-                    </div>
-                </a>
-            @endforeach
+        <div class="col-10">
+            @include('postsIterator')
         </div>
-        <div class="col-3">
-            <div class="sideHead row" style="background-image: url('https://www.redditstatic.com/desktop2x/img/leaderboard/banner-background.png');">
+        <div class="col-2">
+            <div class="sideHead row mr-0" style="background-image: url('https://www.redditstatic.com/desktop2x/img/leaderboard/banner-background.png');">
                 <h2 class="sideText">{{$user->username}}</h2>
             </div>
-            <div class="row border-0 bg-dark rounded-bottom"> 
+            <div class="row border-0 bg-dark rounded-bottom  mr-0"> 
                 <div>
                     <img src="{{$user->profile->profileImage()}}" alt="Profile image" class="w-25 rounded m-2 border">
                 </div>
