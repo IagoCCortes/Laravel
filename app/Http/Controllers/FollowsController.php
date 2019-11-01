@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Follower;
 
 class FollowsController extends Controller
 {
@@ -12,6 +13,8 @@ class FollowsController extends Controller
     }
 
     public function store(User $user){
-        return auth()->user()->following()->toggle($user->profile);
+        $follow = new Follower();
+        $result = $follow->toggleFollow($user);
+        return $result;
     }
 }

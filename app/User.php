@@ -47,8 +47,12 @@ class User extends Authenticatable
         });
     }
 
+    public function followers(){
+        return $this->hasMany('App\Follower', 'follower_id', 'id');
+    }
+
     public function following(){
-        return $this->belongsToMany(Profile::class);
+        return $this->hasMany('App\Follower', 'following_id', 'id');;
     }
 
     public function likes(){

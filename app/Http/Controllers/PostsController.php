@@ -12,15 +12,17 @@ class PostsController extends Controller
     }
 
     public function index(){
-        $users = auth()->user()->following()->pluck('profiles.user_id');
+        /*$users = auth()->user()->following()->pluck('profiles.user_id');
 
         $posts = [];
 
         foreach($users as $user){
             $posts = array_merge($posts, Post::where('user_id', '=', $user)->get());
-        }
+        }*/
 
-        //select p.id as post, pu.id as likes, u.id as user from posts p join users u on p.user_id = u.id join profile_user pr on pr.user_id = u.id left join post_user pu on p.id = pu.post_id;
+        //select p.id as post, pu.id as liked, (select count(post_id) from post_user where post_id = p.id) as likes,image 
+        //from posts p left join post_user pu on p.id = pu.post_id and pu.user_id = 2 
+        //where p.user_id in (select follower_id from followers where following_id = 2);
         //$posts = Post::whereIn('user_id', $users)->latest()->get();
         //use this for pagination
         /*$posts = Post::whereIn('user_id', $users)->with('user')->latest()->paginate(2);
@@ -28,11 +30,16 @@ class PostsController extends Controller
         {{$posts->links()}}
         </div>*/
 
-        $likes = [];
+        /*$likes = [];
         
         foreach($posts as $post){
             $likes = array_merge($likes, (array) (auth()->user() ? auth()->user()->likes->contains($post->id) : false));
-        }
+        }*/
+
+        $posts = new Post;
+        $result = $posts->getIndexPosts();
+
+        dd($result);
         
         //$likes = auth()->user() ? auth()->user()->likes()->pluck('posts.id') : false;
 

@@ -11,7 +11,7 @@ class ProfilesController extends Controller
 {
     public function show(User $user)
     {
-        $follows = auth()->user() ? auth()->user()->following->contains($user->profile->id) : false;
+        $follows = auth()->user() ? auth()->user()->following->contains('follower_id', $user->id) : false;
 
         //without cache
         /*$postCount = $user->posts->count();
@@ -38,7 +38,7 @@ class ProfilesController extends Controller
             'count.followers' . $user->id, 
             now()->addSeconds(30), 
             function() use ($user) {
-                return $user->profile->followers->count();
+                return $user->followers->count();
             });
 
         $followingC =Cache::remember(

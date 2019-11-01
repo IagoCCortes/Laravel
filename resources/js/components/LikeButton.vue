@@ -22,7 +22,7 @@
             likePost(){
                 axios.post('/like/' + this.postId)
                     .then(response => {
-                    this.status = !this.status;
+                        this.status = !this.status;
                     })
                     .catch(errors => {
                         if(errors.response.status == 401){
